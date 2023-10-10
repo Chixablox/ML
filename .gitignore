@@ -1,6 +1,8 @@
 # Prerequisites
 *.d
 venv
+VenvActivation.txt
+example
 
 # Compiled Object files
 *.slo
