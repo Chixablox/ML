@@ -1,4 +1,3 @@
-from math import sqrt
 import numpy as np
 
 class myKMeans:
@@ -37,5 +36,5 @@ class myKMeans:
     def dist(self, x, y):
         dis = np.empty(self.k)
         for i in range(0, self.k):
-            dis[i] = sqrt(np.sum((y[i] - x) ** 2))  
+            dis[i] = np.sqrt(np.sum((y[i] - x) ** 2))  
         return dis
