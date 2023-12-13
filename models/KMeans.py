@@ -16,14 +16,15 @@ class myKMeans:
             for i in range(0, self.m):
                 clusters_idx[i] = np.argmin(self.dist(X[i], self.centroids))
 
-            new_centroids = np.empty(self.k)
+            new_centroids = np.empty([self.k, self.n])
 
             for i in range(0, self.k):
-                new_centroids[i] = np.mean(X[clusters_idx == i])
-                
+                new_centroids[i] = np.mean(X[clusters_idx == i], axis=0)
+
+            
             if np.all(self.centroids == new_centroids):
                 break
-
+            
             self.centroids = new_centroids
 
     def predict(self, X):
